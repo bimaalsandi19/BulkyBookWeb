@@ -22,6 +22,8 @@
                 <th>No</th>
                 <th>Category Name</th>
                 <th>Display Order</th>
+                <th>Created DateTime</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +33,15 @@
                     <td></td>
                     <td>@obj.Name</td>
                     <td>@obj.DisplayOrder</td>
+                    <td>@obj.CreatedDateTime</td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a class="btn btn-warning mx-1" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"><i
+                                class="bi bi-pencil-square"></i> Edit</a>
+                            <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id"><i
+                                class="bi bi-trash"></i> Delete</a>
+                        </div>
+                    </td>
                 </tr>
             }
 
